@@ -1,9 +1,9 @@
 <template>
   <div>
     <Nav />
-    <router-view v-slot="propss">
+    <router-view v-slot="props">
       <transition name="v">
-        <component :is="propss.Component"></component>
+        <component :is="props.Component"></component>
       </transition>
     </router-view>
   </div>
@@ -29,6 +29,8 @@ export default {
 }
 body{
   overflow: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 ::-webkit-scrollbar{
   width: 0px;

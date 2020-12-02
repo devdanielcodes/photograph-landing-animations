@@ -1,23 +1,30 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-export const router =  createRouter({
+import First from '@/views/First.vue'
+import Second from '@/views/Second.vue'
+import Third from '@/views/Third.vue'
+
+
+export const router = createRouter({
     routes: [
         {
             path: '/',
             name: 'First',
-            component: import('@/views/First.vue')
+            component: First
         },
         {
             path: '/s',
             name: 'Second',
-            component: import('@/views/Second.vue')
+            component: Second
         },
         {
             path: '/t',
             name: 'Third',
-            component: import('@/views/Third.vue')
+            component: Third
         }
 
     ],
     history: createWebHistory()
 })
+
+export default router
